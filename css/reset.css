@@ -3,36 +3,46 @@
 }
 html {
 	box-sizing: border-box;
+	--primary-col: #ff3366;    /* main colour */
+	--primary-alt: #ff6699;    /* variant */
+	--primary-on: #ffffff;     /* for text or icons */
+	--secondary-col: #3399ff;
+	--secondary-alt: #99ccff;
+	--secondary-on: #000000;
+	/* etc, etc... */
+	
 }
 body {
 	margin: 0;
+	padding: .5em;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 20px;
 }
 
-
 /* Preview each of these suggested resets before beginning your project styling */
-/*
+
 img {
 	max-width: 100%;
 	height: auto;
-	vertical-align: bottom;
-} */
-/*
+	vertical-align: auto;
+}
+
 ul, ol, dl {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-} */
+}
 /*
 li > ul, li > ol {
 	padding-left: 2.5em;
 } */
-/*
+
 input, button {
 	margin: 0;
 	font: inherit;
-} */
-/*
-fieldset {
+}
+
+/* fieldset {
 	display: flex;
 	margin: 0;
 	padding: 0;

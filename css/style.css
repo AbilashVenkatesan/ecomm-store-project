@@ -1,1 +1,384 @@
-/* Note there a few "reset" styles given in reset.css. Review those before you begin */
+.page-header{
+    background:url(../img/toy-bg.jfif);
+    background-color: #a05926;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo dropdown"
+    "search search"
+    "your-products your-products";
+    padding-bottom: .5em;
+}
+
+.logo{
+    grid-area: logo;
+    justify-self: left;
+    width: 100px;
+    height: 100px;
+}
+
+.dropdown{
+    grid-area: dropdown;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 4em;
+}
+
+.nav-toggle{
+    background-color: burlywood;
+}
+
+.navigation{
+    display: none;
+}
+
+.search{
+    grid-area: search;
+    justify-self: center;
+    color: whitesmoke;
+    padding-bottom: .5em;
+}
+
+.search-icon{
+    background-color: burlywood;
+}
+
+.your-products{
+    grid-area: your-products;
+    justify-self: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: .5em;
+}
+
+.wishlist{
+    padding: .25em;
+    background-color: burlywood;
+    color: black;
+    border-radius: 0em;
+    margin-right: .5em;
+}
+
+.your-cart{
+    padding: .25em;
+    background-color: burlywood;
+    color: black;
+    border-radius: .0em;
+    margin-left: .5em;
+}
+
+.product{
+    display: grid;
+    margin-bottom: .5em;
+    margin-top: -.25em;
+}
+
+.heading{
+    margin-top: -.8em;
+    margin-bottom: -.5em;
+}
+
+.heading>h1{
+    padding-top: .2em;
+    padding-bottom: .3em;
+    color:black;
+    background-color: chocolate;
+}
+
+.filters{
+    padding: 2px;
+    margin-top: -1.3em;
+    border: 1px solid;
+    border-color: black;
+    color: chocolate;
+    background-color: rgba(0, 0, 0, .8)
+}
+
+.filter-options{
+    margin-top: -.5em;
+}
+
+.sort{
+    background-color: burlywood;
+}
+
+.results>h2{
+    margin-top: .5em;
+    margin-bottom: 1.3em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    background-color: chocolate;
+}
+
+.product{
+    margin-top: -2em;
+    margin-bottom: 4em;
+    padding: .5em;
+    border: 1px solid;
+    border-color: black;
+    color: chocolate;
+    background-color: rgba(0, 0, 0, .8)
+}
+
+.view-product{
+    background-color: burlywood;
+}
+
+.product-footer{
+    margin-top: .5em;
+    background-color: burlywood;
+}
+
+.pages{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.page-num{
+    background-color: burlywood;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+.pagination{
+    justify-self: center;
+    color:chocolate;
+}
+
+.page-footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "social legal"
+    "copyright copyright";
+    padding: 1em;
+    margin-top: -4em;
+    color: burlywood;
+    background: rgba(0, 0, 0);
+}
+
+.about{
+    display: none;
+}
+
+.social{
+    grid-area: social;
+    justify-self: center;
+}
+
+.legal{
+    grid-area: legal;
+    justify-self: center;
+}
+
+.copyright{
+    grid-area: copyright;
+    justify-self: center;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: burlywood;
+}
+
+/* --------------Large Viewport--------------- */
+
+@media only screen and (min-width: 800px){
+    body{
+        background-color: burlywood;
+        border: 10px solid;
+        border-color: white;
+    }
+
+    .page-header{
+        background:url(../img/toy-bg.jfif);
+        background-color: #a05926;
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: .25fr 2fr .75fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "logo search your-products"
+        "logo menu .";
+        padding-bottom: 0em;
+    }
+
+    .logo{
+        grid-area: logo;
+        max-width: 100%;
+    }
+
+    .search{
+        grid-area: search;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin-top: -1.5em;
+        margin-bottom: -1.5em;
+        padding-bottom: -5em;
+    }
+    
+    .search-icon{
+        padding-bottom: 1.2em;
+        height: 25px;
+    }
+
+    .your-products{
+        grid-area: your-products;
+        justify-self: right;
+        padding-top: .75em;
+        padding-right: .5em;
+    }
+
+    .wishlist{
+        margin-bottom: 1em;
+        padding-bottom: -.5em;
+    }
+
+    .your-cart{
+        margin-bottom: 1em;
+        padding:-.5em;
+    }
+
+    .dropdown{
+        grid-area: menu;
+        justify-self: center;
+        padding-top: -5em;
+        padding-bottom: -3em;
+        margin-bottom: -3em;
+    }
+
+    nav,.nav-toggle{
+        display: none;
+    }
+
+    .navigation{
+        grid-area: menu;
+        display: inline-flex;
+        margin-bottom: -2em;
+    }
+
+    nav,.menu{
+        grid-area: menu;
+        display: inline-flex;
+    }
+
+    nav,.submenu{
+        grid-area: menu;
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-content: space-between;
+    }
+
+    .menu-button{
+        border: 1px black;
+        background-color: burlywood;
+        color: black;
+        text-decoration: none;
+        margin: .2em;
+        padding: .2em;
+    }
+
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+        "heading heading"
+        "filters results";
+    }
+
+    .heading{
+        grid-area: heading;
+        margin-top: -1.25em;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .filters{
+        grid-area: filters;
+        margin-top: -.8em;
+        margin-right: 1.5px;
+        margin-left: 5rem;
+    }
+
+    .sort{
+        background-color: burlywood;
+    }
+
+    .results{
+        grid-area: results;
+        margin-top: -.8em;
+        margin-left: 1.5px;
+        margin-right: 5rem;
+        padding-top: 0%;
+        padding-bottom: -.5em;
+        border: 1px solid;
+        border-color:black;
+        background-color: rgba(0, 0, 0, .8);
+        margin-bottom: 0px;
+    }
+
+    .results>h2{
+        margin-top: 0%;
+        margin-bottom: -18px;
+        color: chocolate;
+        background-color: rgba(0, 0, 0, .8);
+    }
+
+    .product{
+        display: inline-block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .pagination{
+        display: grid;
+        justify-content: center;
+        color:chocolate;
+    }    
+
+    .page-num{
+        justify-self: center;
+    }
+
+    .page-footer{
+        display: grid;
+        grid-template-areas: 
+        "about about"
+        "social legal"
+        "copyright .";
+        margin-top: -1.2em;
+    }
+
+    .about{
+        display: inline;
+        grid-area: about;
+    }
+
+    .social{
+        grid-area: social;
+    }
+
+    .legal{
+        grid-area: legal;
+    }
+
+    .copyright{
+        grid-area: copyright;
+        justify-self: left;
+    }
+}
