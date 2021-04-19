@@ -105,10 +105,22 @@
     padding: .5em;
 }
 
+.product-description h1{
+    margin-top: 0em;
+}
+
 .rel-prod{
+    color: chocolate;
+    background-color: rgba(0, 0, 0, .8);
     border: 1px solid;
     border-color: black;
     padding: .5em;
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+}
+
+.view-product{
+    background-color: burlywood;
 }
 
 .options{
@@ -133,8 +145,10 @@
 
 .product-footer-button{
     background-color: burlywood;
-    /* display: inline;
-    justify-self: center; */
+}
+
+.Lego{
+    margin-bottom: -1em;
 }
 
 .page-footer{
@@ -279,9 +293,9 @@
         padding: .2em;
     }
 
-    .products{
+    .Lego{
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 4fr 1fr;
         grid-template-areas: 
         "heading heading"
         "filters results";
