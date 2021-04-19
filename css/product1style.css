@@ -96,6 +96,47 @@
     grid-row-start: 2;
 }
 
+.product-description{
+    border: 1px solid;
+    border-color: black;
+    background-color: rgba(0, 0, 0, .8);
+    color: chocolate;
+    margin-top: .5em;
+    padding: .5em;
+}
+
+.rel-prod{
+    border: 1px solid;
+    border-color: black;
+    padding: .5em;
+}
+
+.options{
+    margin-top: .5em;
+    display: grid;
+    grid-template-areas: "color size";
+}
+
+.color{
+    grid-area: color;
+}
+
+.Sizes{
+    grid-area: size;
+}
+
+.product-footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 1em;
+}
+
+.product-footer-button{
+    background-color: burlywood;
+    /* display: inline;
+    justify-self: center; */
+}
+
 .page-footer{
     display: grid;
     grid-template-columns: auto auto;
@@ -104,7 +145,7 @@
     "social legal"
     "copyright copyright";
     padding: 1em;
-    margin-top: -4em;
+    /* margin-top: -4em; */
     color: burlywood;
     background: rgba(0, 0, 0);
 }
