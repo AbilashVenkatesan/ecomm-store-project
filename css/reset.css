@@ -3,15 +3,8 @@
 }
 html {
 	box-sizing: border-box;
-	--primary-col: #ff3366;    /* main colour */
-	--primary-alt: #ff6699;    /* variant */
-	--primary-on: #ffffff;     /* for text or icons */
-	--secondary-col: #3399ff;
-	--secondary-alt: #99ccff;
-	--secondary-on: #000000;
-	/* etc, etc... */
-	
 }
+
 body {
 	margin: 0;
 	padding: .5em;

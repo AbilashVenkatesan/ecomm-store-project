@@ -167,12 +167,11 @@
 }
 
 .product-footer{
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-top: 1em;
+    display: inline-flex;
 }
 
 .product-footer-button{
+    margin: 1em;
     background-color: burlywood;
 }
 

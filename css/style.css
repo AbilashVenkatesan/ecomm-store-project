@@ -221,8 +221,8 @@
     }
 
     .product1 .product{
-        mask-border: 0em;
-        padding-bottom: 1.2em;
+        margin-bottom: 0em;
+        padding-bottom: .6em;
     }
 
     .product2{
@@ -235,7 +235,7 @@
 
     .product3 .product{
         margin-bottom: 2em;
-        padding-bottom: 7.2em;
+        padding-bottom: 6.4em;
     }
 
     .product4{
@@ -261,8 +261,9 @@
     }
 
     .page-footer{
-        margin-top: -4em;
+        margin-top: -5em;
     }
+}
 /* --------------Large Viewport--------------- */
 
 @media only screen and (min-width: 70em){
@@ -417,6 +418,21 @@
         display: inline-block;
         margin-top: 1em;
         margin-bottom: 1em;
+    }
+
+    .product1 .product{
+        margin-bottom: 0em;
+        padding-bottom: .5em;
+    }
+
+    .product3 .product{
+        margin-bottom: 0em;
+        padding-bottom: .5em;
+    }
+
+    .product5 .product{
+        margin-bottom: 0em;
+        padding-bottom: .5em;
     }
 
     .pagination{
