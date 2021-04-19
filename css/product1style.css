@@ -127,6 +127,11 @@
     padding: .5em;
 }
 
+.product-description h1{
+    background-color: transparent;
+    color: chocolate;
+}
+
 .rel-prod{
     background-color: rgba(0, 0, 0, .8);
     color: chocolate;
