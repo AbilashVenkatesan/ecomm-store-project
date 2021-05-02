@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header id="header" class="page-header">
       <a href="index.html" class="logo"> <img src="./img/e-comm Logo.jpg" alt="Logo"></a>
 
       <!-- Search for a product (non-functional) -->
@@ -35,15 +35,15 @@
       </button>
       <nav aria-label="Primary" class="navigation">
         <ul class="menu">
-          <li><a href="index.html" class="menu-button">home</a>
+          <li><a href="index.html" class="menu-button">Home</a>
             <ul class="submenu">
-              <li><a href="#" class="menu-button">General Toys</a></li>
-              <li><a href="#" class="menu-button">Toys for boys</a></li>
-              <li><a href="#" class="menu-button">Toys for girls</a></li>
+              <li><a href="#general toys" class="menu-button">General Toys</a></li>
+              <li><a href="#boys" class="menu-button">Toys for boys</a></li>
+              <li><a href="#girls" class="menu-button">Toys for girls</a></li>
             </ul>
           </li>
-          <li><a href="#" class="menu-button">About</a></li>
-          <li><a href="#" class="menu-button">Contact</a></li>
+          <li><a href="#about us" class="menu-button">About Us</a></li>
+          <li><a href="#contact" class="menu-button">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -125,6 +125,7 @@
             <option value="price-high">Price, highest to lowest</option>
             <option value="price-low">Price, lowest to highest</option>
             <option value="newest">Newest releases</option>
+            <option value="newest">Trending</option>
           </select>
         </fieldset>
       </form>
@@ -136,6 +137,7 @@
         <section class="product1">
         <article class="product">
           <header>
+            <h3 id="general toys">General Toys</h3>
             <img src="img/Lego.jpg" alt="Lego">
             <h3>Sonic lego set</h3>
             <data value="39"><del>$49.99</del> <ins>$29.99</ins></data>
@@ -214,6 +216,7 @@
         <section class="product3">
         <article class="product">
           <header>
+            <h3 id="boys">Toys for boys</h3>
             <img src="img/Nerf.jpg" alt="nerf gun">
             <h3>Nerf Gun</h3>
             <data value="39"><del>$219.99</del> <ins>$199.99</ins></data>
@@ -292,6 +295,7 @@
         <section class="product5">
         <article class="product">
           <header>
+            <h3 id="girls">Toys for girls</h3>
             <img src="img/Barbie.jpg" alt="Barbie">
             <h3>Barbie</h3>
             <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
@@ -372,6 +376,7 @@
               <li class="page-num"><a href="#" class="link" aria-label="Page 4">4</a></li>
               <li class="page-num"><a href="#" class="link" aria-label="Page 5">5</a></li>
             </ol>
+            <p class="back-top"><a href="#header" class="menu-button">Back to top ^</a></p>
           </nav>
         </article>
       </section>
@@ -380,11 +385,11 @@
 
     <footer class="page-footer">
       <section class="about">
-        <h1>About Us</h1>
+        <h1 id="about us">About Us</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis molestias magni corrupti quam consequatur delectus est ex non dolor laudantium dicta asperiores quis eveniet nobis, cumque eius quidem iusto?<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, maiores? Cupiditate soluta, veritatis fuga eligendi, omnis consequatur deleniti rem beatae non dolor ipsum consectetur, culpa placeat. Impedit excepturi alias dolor!        </p>
       </section>
-      <ul class="social">
+      <ul id="contact" class="social">
         <li><a href="#" class="footer-link"><span class="material-icons">face</span>Facebook</a></li>
         <li><a href="#" class="footer-link"><span class="material-icons">camera_alt</span>Instagram</a></li>
         <li><a href="#" class="footer-link"><span class="material-icons">alternate_email</span>Twitter</a></li>

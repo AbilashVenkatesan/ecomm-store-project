@@ -28,6 +28,13 @@
     padding-bottom: 4em;
 }
 
+.navigation ul ul li a:hover,
+.navigation ul li a:hover
+{
+    background: black;
+    color: chocolate;
+}
+
 .nav-toggle{
     background-color: burlywood;
 }

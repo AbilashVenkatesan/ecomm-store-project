@@ -151,6 +151,13 @@
     color:chocolate;
 }
 
+.back-top>a{
+    text-decoration: none;
+    color: black;
+    background-color: chocolate;
+    border: 1px solid black;
+}
+
 .page-footer{
     display: grid;
     grid-template-columns: auto auto;
@@ -260,6 +267,13 @@
         margin-left: 1px;
     }
 
+    .back-top>a{
+        text-decoration: none;
+        color: black;
+        background-color: chocolate;
+        border: 1px solid black;
+    }
+
     .page-footer{
         margin-top: -5em;
     }
@@ -335,6 +349,21 @@
         padding-top: -5em;
         padding-bottom: -3em;
         margin-bottom: -3em;
+    }
+
+    .navigation ul ul li a:hover,
+.navigation ul li a:hover
+{
+    background: black;
+    color: chocolate;
+}
+
+    .menu ul ul li a:hover,
+    .menu ul li.active ul li a:hover,
+    .menu ul li:hover ul li a:hover 
+    {
+    background: black;
+    color: chocolate;
     }
 
     nav,.nav-toggle{
@@ -440,6 +469,11 @@
         justify-content: center;
         color:chocolate;
     }    
+
+    .back-top>a{
+        text-decoration: none;
+        color: black
+    }
 
     .page-num{
         justify-self: center;
