@@ -1,3 +1,4 @@
+/* header section */
 .page-header{
     background:url(../img/toy-bg.jfif);
     background-color: #a05926;
@@ -14,6 +15,7 @@
     padding-bottom: .5em;
 }
 
+/* logo alignment */
 .logo{
     grid-area: logo;
     justify-self: left;
@@ -21,6 +23,7 @@
     height: 100px;
 }
 
+/* menu bar */
 .dropdown{
     grid-area: dropdown;
     display: flex;
@@ -28,7 +31,7 @@
     padding-bottom: 4em;
 }
 
-
+/* menu nav */
 .nav-toggle{
     background-color: burlywood;
 }
@@ -37,6 +40,7 @@
     display: none;
 }
 
+/* search bar */
 .search{
     grid-area: search;
     justify-self: center;
@@ -48,20 +52,13 @@
     background-color: burlywood;
 }
 
+/* cart */
 .your-products{
     grid-area: your-products;
     justify-self: center;
     display: flex;
     justify-content: flex-end;
     padding-left: .5em;
-}
-
-.wishlist{
-    padding: .25em;
-    background-color: burlywood;
-    color: black;
-    border-radius: 0em;
-    margin-right: .5em;
 }
 
 .your-cart{
@@ -72,17 +69,29 @@
     margin-left: .5em;
 }
 
+/* wishlist */
+.wishlist{
+    padding: .25em;
+    background-color: burlywood;
+    color: black;
+    border-radius: 0em;
+    margin-right: .5em;
+}
+
+/* products */
 .product{
     display: grid;
     margin-bottom: .5em;
     margin-top: -.25em;
 }
 
+/* styling for heading */
 .heading{
     margin-top: -.8em;
     margin-bottom: -.5em;
 }
 
+/* styling for h1 */
 .heading>h1{
     padding-top: .2em;
     padding-bottom: .3em;
@@ -90,6 +99,7 @@
     background-color: chocolate;
 }
 
+/* styling for filters */
 .filters{
     padding: 2px;
     margin-top: -1.3em;
@@ -107,6 +117,7 @@
     background-color: burlywood;
 }
 
+/* styling for h2 */
 .results>h2{
     margin-top: .5em;
     margin-bottom: 1.3em;
@@ -115,6 +126,7 @@
     background-color: chocolate;
 }
 
+/* products */
 .product{
     margin-top: -2em;
     margin-bottom: 4em;
@@ -125,15 +137,18 @@
     background-color: rgba(0, 0, 0, .8)
 }
 
+/* view product button */
 .view-product{
     background-color: burlywood;
 }
 
+/* footer of each product */
 .product-footer{
     margin-top: .5em;
     background-color: burlywood;
 }
 
+/* style for pagination */
 .pages{
     display: flex;
     flex-wrap: wrap;
@@ -159,6 +174,7 @@
     border: 1px solid black;
 }
 
+/* styling for footer */
 .page-footer{
     display: grid;
     grid-template-columns: auto auto;
@@ -202,7 +218,7 @@
 }
 
 /* --------------Medium Viewport-------------- */
-
+/* styling body and setting viewport */
 @media only screen and (min-width: 40em){
     body{
         /* background-color: burlywood; */
@@ -210,6 +226,7 @@
         border-color: white;
     }
 
+    /* styling for product content */
     .results{
         display: grid;
         grid-template-columns: auto auto;
@@ -224,6 +241,7 @@
         grid-area: heading;
     }
 
+    /* product1 */
     .product1{
         grid-area: product1;
     }
@@ -233,10 +251,12 @@
         padding-bottom: .6em;
     }
 
+    /* product2 */
     .product2{
         grid-area: product2;
     }
 
+    /* product3 */
     .product3{
         grid-area: product3;
     }
@@ -246,10 +266,12 @@
         padding-bottom: 6.4em;
     }
 
+    /* product4 */
     .product4{
         grid-area: product4;
     }
 
+    /* product5 */
     .product5{
         grid-area: product5;
     }
@@ -258,7 +280,7 @@
         margin-bottom: 0em;
         padding-bottom: 15em;
     }
-
+/* product6 */
     .product6{
         grid-area: product6;
     }
@@ -280,7 +302,7 @@
     }
 }
 /* --------------Large Viewport--------------- */
-
+/* styling body and setting viewport */
 @media only screen and (min-width: 70em){
     body{
         background-color: burlywood;
@@ -288,6 +310,7 @@
         border-color: white;
     }
 
+    /* styling for header */
     .page-header{
         background:url(../img/toy-bg.jfif);
         background-color: #a05926;
@@ -307,11 +330,13 @@
         display: block;
     }
     
+    /* aligning logo */
     .logo{
         grid-area: logo;
         max-width: 100%;
     }
 
+    /* styling search bar */
     .search{
         grid-area: search;
         display: flex;
@@ -327,6 +352,7 @@
         height: 25px;
     }
 
+    /* cart */
     .your-products{
         grid-area: your-products;
         justify-self: right;
@@ -334,16 +360,18 @@
         padding-right: .5em;
     }
 
-    .wishlist{
-        margin-bottom: 1em;
-        padding-bottom: -.5em;
-    }
-
     .your-cart{
         margin-bottom: 1em;
         padding:-.5em;
     }
 
+    /* wishlist */
+    .wishlist{
+        margin-bottom: 1em;
+        padding-bottom: -.5em;
+    }
+
+    /* styling menu bar */
     .dropdown{
         grid-area: menu;
         justify-self: center;
@@ -352,6 +380,7 @@
         margin-bottom: -3em;
     }
 
+    /* hover function for navigation */
     .navigation ul ul li a:hover,
 .navigation ul li a:hover
 {
@@ -371,6 +400,7 @@
         display: none;
     }
 
+    /* styling for navigation */
     .navigation{
         grid-area: menu;
         display: inline-flex;
@@ -389,6 +419,7 @@
         align-content: space-between;
     }
 
+    /* styling for menu button */
     .menu-button{
         border: 1px black;
         background-color: burlywood;
@@ -398,6 +429,7 @@
         padding: .2em;
     }
 
+    /* styking products */
     .products{
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -406,6 +438,7 @@
         "filters results";
     }
 
+    /* styling headings */
     .heading{
         grid-area: heading;
         margin-top: -1.25em;
@@ -413,6 +446,7 @@
         margin-right: 5rem;
     }
 
+    /* styling filters */
     .filters{
         grid-area: filters;
         margin-top: -.8em;
@@ -424,6 +458,7 @@
         background-color: burlywood;
     }
 
+/* styling result content */
     .results{
         grid-area: results;
         margin-top: -.8em;
@@ -465,6 +500,7 @@
         padding-bottom: .5em;
     }
 
+    /* styling pagination */
     .pagination{
         display: grid;
         justify-content: center;
@@ -480,6 +516,7 @@
         justify-self: center;
     }
 
+    /* styling footer */
     .page-footer{
         display: grid;
         grid-template-areas: 

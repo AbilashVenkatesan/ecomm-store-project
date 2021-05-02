@@ -1,3 +1,4 @@
+/* styling for header */
 .page-header{
     background:url(../img/toy-bg.jfif);
     background-color: #a05926;
@@ -14,6 +15,7 @@
     padding-bottom: .5em;
 }
 
+/* logo positioning */
 .logo{
     grid-area: logo;
     justify-self: left;
@@ -21,6 +23,7 @@
     height: 100px;
 }
 
+/* styling menu bar */
 .dropdown{
     grid-area: dropdown;
     display: flex;
@@ -28,6 +31,7 @@
     padding-bottom: 4em;
 }
 
+/* hover fuction for navigation */
 .navigation ul ul li a:hover,
 .navigation ul li a:hover
 {
@@ -43,6 +47,7 @@
     display: none;
 }
 
+/* styling search bar */
 .search{
     grid-area: search;
     justify-self: center;
@@ -54,20 +59,13 @@
     background-color: burlywood;
 }
 
+/* cart */
 .your-products{
     grid-area: your-products;
     justify-self: center;
     display: flex;
     justify-content: flex-end;
     padding-left: .5em;
-}
-
-.wishlist{
-    padding: .25em;
-    background-color: burlywood;
-    color: black;
-    border-radius: 0em;
-    margin-right: .5em;
 }
 
 .your-cart{
@@ -78,6 +76,16 @@
     margin-left: .5em;
 }
 
+/* wishlist */
+.wishlist{
+    padding: .25em;
+    background-color: burlywood;
+    color: black;
+    border-radius: 0em;
+    margin-right: .5em;
+}
+
+/* styling product content */
 .product1{
     background-color: burlywood;
   display: grid;
@@ -88,6 +96,7 @@
     margin-top: -.4em;
 }
 
+/* styling h1 */
 .product1 h1{
     background-color: chocolate;
     color: black;
@@ -105,6 +114,7 @@
     padding-bottom: .25em;
 }
 
+/* styling images */
 .gallery{
     padding-top: 0em;
     /* padding-right: .25em;
@@ -124,6 +134,7 @@
     grid-row-start: 2;
 }
 
+/* styling description box */
 .product-description{
     border: 1px solid;
     border-color: black;
@@ -139,6 +150,7 @@
     color: chocolate;
 }
 
+/* styling related products */
 .rel-prod{
     background-color: rgba(0, 0, 0, .8);
     color: chocolate;
@@ -155,6 +167,7 @@
     margin-bottom: -1.5em;
 }
 
+/* styling view product button */
 .view-product{
     background-color: burlywood;
 }
@@ -177,6 +190,7 @@
     display: inline-flex;
 }
 
+/* styling product footer */
 .product-footer-button{
     margin: 1em;
     background-color: burlywood;
@@ -186,6 +200,7 @@
     margin-bottom: -1em;
 }
 
+/* styling page footer */
 .page-footer{
     display: grid;
     grid-template-columns: auto auto;
@@ -230,7 +245,7 @@
 }
 
 /* --------------Large Viewport--------------- */
-
+/* styling body and setting viewport */
 @media only screen and (min-width: 70em){
     body{
         background-color: burlywood;
@@ -253,11 +268,12 @@
         padding-bottom: 0em;
     }
 
+    /* logo position */
     .logo{
         grid-area: logo;
         max-width: 100%;
     }
-
+    /* styling search bar */
     .search{
         grid-area: search;
         display: flex;
@@ -273,13 +289,14 @@
         height: 25px;
     }
 
+    /* cart */
     .your-products{
         grid-area: your-products;
         justify-self: right;
         padding-top: .75em;
         padding-right: .5em;
     }
-
+/* wishlist */
     .wishlist{
         margin-bottom: 1em;
         padding-bottom: -.5em;
@@ -289,7 +306,7 @@
         margin-bottom: 1em;
         padding:-.5em;
     }
-
+    /* styling menu bar */
     .dropdown{
         grid-area: menu;
         justify-self: center;
@@ -329,6 +346,7 @@
         padding: .2em;
     }
 
+    /* styling product 1 content */
     .product1{
         display: grid;
         grid-template-columns: 4fr 1fr;
@@ -363,6 +381,7 @@
         margin: 1em;
     }
 
+    /* styling related product */
     .rel-prod-grid{
         grid-area: related-product;
         background-color: rgba(0, 0, 0, .8);
@@ -377,6 +396,7 @@
         padding-bottom: .25em;
     }
 
+    /* styling page footer */
     .page-footer{
         grid-area: footer;
         display: grid;
