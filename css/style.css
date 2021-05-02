@@ -40,6 +40,10 @@
     display: none;
 }
 
+.show{
+    display: block;
+}
+
 /* search bar */
 .search{
     grid-area: search;
