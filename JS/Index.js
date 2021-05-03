@@ -74,7 +74,7 @@ nav_toggle.addEventListener('click',function ()
 })
 
 
-// stacking array
+//Making array reference
 const toyResult = document.querySelector(`.results`)
 const userInput = document.querySelector('.searchInput')
 
@@ -83,20 +83,20 @@ const displayProduct = function(toyArray)
     toyResult.innerHTML = toyResult.innerHTML = '<h2 class="subheading">Results</h2>'
     toyArray.forEach((toy) => {
 
-        const oneToy = document.createElement(`article`)
-oneToy.classList.add(`toy`)
-oneToy.innerHTML = 
+        const singleToy = document.createElement(`article`)
+        singleToy.classList.add(`toy`)
+        singleToy.innerHTML = 
 
-   `<article class="product">
-        <a href="product.html" target="_blank"><img src="/img/toys/${toy.toyImg}" alt="${toy.toyName}" class="product-img"></a>  
-        <button type="button"><span class="material-icons">favorite</span></button>
+        `<article class="product">
+            <a href="product.html" target="_blank"><img src="/img/toys/${toy.toyImg}" alt="${toy.toyName}" class="product-img"></a>  
+            <button type="button"><span class="material-icons">favorite</span></button>
      
-        <h3>${toy.toyName}    
-        <span class="material-icons">star alt="review-star class="review"</span>
-        <span class="material-icons">star alt="review-star class="review"</span>
-        <span class="material-icons">star alt="review-star class="review"</span>
-        <span class="material-icons">star alt="review-star class="review"</span></h3>
-        <data value="29.99" class="price">$${toy.price}</data><br/>
+            <h3>${toy.toyName}    
+            <span class="material-icons">star alt="review-star class="review"</span>
+            <span class="material-icons">star alt="review-star class="review"</span>
+            <span class="material-icons">star alt="review-star class="review"</span>
+            <span class="material-icons">star alt="review-star class="review"</span></h3>
+            <data value="29.99" class="price">$${toy.price}</data><br/>
             <label class="container2">
                 <input type="checkbox">
                 <span class="check2"></span>
@@ -105,9 +105,63 @@ oneToy.innerHTML =
                 <input type="checkbox">
                 <span class="check3"></span>
             </label>
-    </article>`
+        </article>`
      
-    productTable.appendChild(toys);
+    toyTable.appendChild(toys);
 
     });
 }
+
+// search function for array
+const searchFilter = document.getElementById('searchFilter');
+const setToySearch= function(toyArray)
+{
+    searchFilter.innerHTML = '<h2 class="subheading">Search result</h2>'
+    toyArray.forEach((toy) =>{
+    let toySearch = document.createElement('article');
+    toySearch.classList.add('toy');
+    toySearch.innerHTML =`<article class="product">
+
+        <a href="product.html" target="_blank"><img src="/ecomm-store-project/img/products/${toy.toyImg}" alt="${toy.toyName}" class="product-img"></a>  
+        <button type="button"><span class="material-icons">favorite</span></button>
+     
+        <h3>${toy.toyName}    
+        <span class="material-icons">star alt="review-star class="review"</span>
+        <span class="material-icons">star alt="review-star class="review"</span>
+        <span class="material-icons">star alt="review-star class="review"</span>
+        <span class="material-icons">star alt="review-star class="review"</span></h3>
+        <data value="29.99" class="price">$${toy.price}</data><br/>
+       <label class="container2">
+          <input type="checkbox">
+          <span class="check2"></span>
+        </label>
+        <label class="container3">
+        <input type="checkbox">
+        <span class="check3"></span>
+        </label>
+         </article>`
+          
+         toyTable.appendChild(toySearch);
+     
+    });
+
+}
+
+searchFilter.addEventListener('input', function(event){
+    const query = event.target.value.toUpperCase();
+   
+   
+       const toySearch=  toyArray.filter(function(toy){
+           let toy= toy.toyName.toUpperCase()
+   
+           if(toy.includes(query)){
+               return true
+           }
+           else{
+               return false
+           }
+       });
+       
+       setToySearch(toySearch);
+   
+   });
