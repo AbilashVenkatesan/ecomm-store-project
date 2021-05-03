@@ -42,6 +42,8 @@
 
 .show{
     display: block;
+    background-color: chocolate;
+    z-index: 1;
 }
 
 /* search bar */
