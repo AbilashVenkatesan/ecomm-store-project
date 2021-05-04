@@ -97,6 +97,10 @@
     margin-bottom: -.5em;
 }
 
+.category-hidden{
+    display: none;
+}
+
 /* styling for h1 */
 .heading>h1{
     padding-top: .2em;
@@ -169,8 +173,13 @@
 }
 
 .pagination{
+    grid-area: pagination;
     justify-self: center;
     color:chocolate;
+}
+
+.false{
+    display: none;
 }
 
 .back-top>a{
@@ -289,6 +298,11 @@
 /* product6 */
     .product6{
         grid-area: product6;
+        display: block;
+    }
+      
+    .toys{
+        display: none;
     }
 
     .product{
