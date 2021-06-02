@@ -81,7 +81,7 @@ toys.forEach((toy)=> {
     <h3 id="${toy.toyId}" class="${toy.toyCat}">${toy.toyCategory}</h3>
           <header>
             <img src="img/${toy.toyImg}" alt="Lego">
-            <h3>${toy.toyName}</h3>
+            <h3><a href="Product1.html">${toy.toyName}</a></h3>
             <data value="39"><del>$49.99</del> <ins>$29.99</ins></data>
             <p>Sonic lego set including all characters shown in the image with environment. Also includes instruction on how to build the sonic obstacle course.</p>
             <p><button type="button" class="view-product"><a href="product1.html" class="link">View Product</a></button></p>
