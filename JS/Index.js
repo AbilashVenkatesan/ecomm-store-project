@@ -112,6 +112,7 @@ toys.forEach((toy)=> {
             <button type="button" class="product-footer"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
             <button type="button" class="product-footer"><span class="material-icons">favorite</span></button>
           </footer>
+          </article>
 
           <!-- Pagination -->
               <nav aria-label="Pagination" class="${toy.toyPagination}">
@@ -123,9 +124,8 @@ toys.forEach((toy)=> {
                   <li class="page-num"><a href="#" class="link" aria-label="Page 4">4</a></li>
                   <li class="page-num"><a href="#" class="link" aria-label="Page 5">5</a></li>
                 </ol>
-                <p class="back-top"><a href="#header" class="menu-button">Back to top ^</a></p>
+                <p class="back-top"><a href="#header">Back to top ^</a></p>
               </nav>
-        </article>
         `
 
         toyResult.appendChild(toyArray);

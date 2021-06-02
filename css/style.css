@@ -1,4 +1,11 @@
+/* --------------------------small viewport------------------------ */
+/* Styling for body */
+body{
+    background-color: burlywood;
+}
+
 /* header section */
+/* Styling for header */
 .page-header{
     background:url(../img/toy-bg.jfif);
     background-color: #a05926;
@@ -6,13 +13,12 @@
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-    "logo dropdown"
-    "search search"
-    "your-products your-products";
-    padding-bottom: .5em;
+    "logo search menu"
+    "logo your-products .";
+    padding-bottom: 0em;
 }
 
 /* logo alignment */
@@ -25,7 +31,7 @@
 
 /* menu bar */
 .dropdown{
-    grid-area: dropdown;
+    grid-area: menu;
     display: flex;
     justify-content: flex-end;
     padding-bottom: 4em;
@@ -65,6 +71,7 @@
     display: flex;
     justify-content: flex-end;
     padding-left: .5em;
+    margin-top: -2.5em;
 }
 
 .your-cart{
@@ -73,6 +80,7 @@
     color: black;
     border-radius: .0em;
     margin-left: .5em;
+    max-height: 2em;
 }
 
 /* wishlist */
@@ -82,6 +90,7 @@
     color: black;
     border-radius: 0em;
     margin-right: .5em;
+    max-height: 2em;
 }
 
 /* products */
@@ -91,28 +100,38 @@
     margin-top: -.25em;
 }
 
-/* styling for heading */
+/* Styling for heading */
 .heading{
-    margin-top: -.8em;
-    margin-bottom: -.5em;
+    color: black;
+    border: 1px solid black;
+    background-color: chocolate;
+    margin-top: .25em;
+}
+
+.heading>h1{
+    margin-top: .25em;
+    margin-bottom: .25em;
 }
 
 .category-hidden{
     display: none;
 }
 
-/* styling for h1 */
-.heading>h1{
-    padding-top: .2em;
-    padding-bottom: .3em;
-    color:black;
-    background-color: chocolate;
+/* Styling for heading results */
+.subheading{
+    grid-area: heading;
+    margin-top: .25em;
+    margin-bottom: 1.5em;
+    color: chocolate;
+    border: 1px solid black;
+    background-color: black;
 }
+  
 
 /* styling for filters */
 .filters{
     padding: 2px;
-    margin-top: -1.3em;
+    margin-top: .25em;
     border: 1px solid;
     border-color: black;
     color: chocolate;
@@ -167,7 +186,7 @@
 }
 
 .page-num{
-    background-color: burlywood;
+    background-color: chocolate;
     padding-left: 2.5px;
     padding-right: 2.5px;
 }
@@ -232,93 +251,151 @@
     color: burlywood;
 }
 
+ /* styling pagination */
+ .pagination{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: chocolate;
+    margin-top: -4em;
+    /* margin-left: -22.5em; */
+    margin-bottom: .5em;
+}    
+
+
+/* styling for back to top buton */
+.back-top>a{
+    text-decoration: none;
+    color: black;
+    background-color: chocolate;
+    border: 1px solid black;
+    margin-left: 2.5em;
+}
+
+/* styling footer */
+.page-footer{
+    display: grid;
+    grid-template-areas: 
+    "about about"
+    "social legal"
+    "copyright copyright";
+    margin-top: -1.2em;
+}
+
 /* --------------Medium Viewport-------------- */
 /* styling body and setting viewport */
 @media only screen and (min-width: 40em){
     body{
-        /* background-color: burlywood; */
-        border: 10px solid;
-        border-color: white;
+        background-color: burlywood;
+        /* border: 10px solid;
+        border-color: white; */
+    }
+
+    /* Styling for header */
+    .page-header{
+        background:url(../img/toy-bg.jfif);
+        background-color: #a05926;
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "logo search menu"
+        "logo your-products .";
+        padding-bottom: 0em;
+    }
+
+    /* Styling for h1 */
+    .heading>h1{
+        color: black;
     }
 
     /* styling for product content */
     .results{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
         "heading heading"
-        "product1 product2"
-        "product3 product4"
-        "product5 product6";
+        "product";
+        gap: .5em;
     }
 
+    /* Styling for heading results */
     .subheading{
         grid-area: heading;
-    }
-
-    /* product1 */
-    .product1{
-        grid-area: product1;
-    }
-
-    .product1 .product{
-        margin-bottom: 0em;
-        padding-bottom: .6em;
-    }
-
-    /* product2 */
-    .product2{
-        grid-area: product2;
-    }
-
-    /* product3 */
-    .product3{
-        grid-area: product3;
-    }
-
-    .product3 .product{
-        margin-bottom: 2em;
-        padding-bottom: 6.4em;
-    }
-
-    /* product4 */
-    .product4{
-        grid-area: product4;
-    }
-
-    /* product5 */
-    .product5{
-        grid-area: product5;
-    }
-
-    .product5 .product{
-        margin-bottom: 0em;
-        padding-bottom: 15em;
-    }
-/* product6 */
-    .product6{
-        grid-area: product6;
-        display: block;
+        margin-top: .25em;
+        margin-bottom: 1.5em;
+        color: chocolate;
+        border: 1px solid black;
+        background-color: black;
     }
       
+    .logo{
+        grid-area: logo;
+    }
+
+    .search{
+        grid-area: search;
+    }
+
+    .dropdown{
+        grid-area: menu;
+    }
+
+    .your-products{
+        grid-area: your-products;
+        margin-top: -2.5em;
+    }
+
+    .wishlist{
+        max-height: 2em;
+    }
+
+.your-products{
+    max-height: 2em;
+}
+
     .toys{
         display: none;
     }
 
     .product{
+        min-height: 58em;
         margin-right: 1px;
         margin-left: 1px;
     }
 
+     /* styling pagination */
+     .pagination{
+        display: grid;
+        justify-content: left;
+        align-content: center;
+        color: chocolate;
+        margin-top: -4em;
+        margin-left: -6em;
+        margin-bottom: .5em;
+    }    
+
+    /* styling for back to top buton */
     .back-top>a{
         text-decoration: none;
         color: black;
         background-color: chocolate;
         border: 1px solid black;
+        margin-left: 2.5em;
     }
 
+    /* styling footer */
     .page-footer{
-        margin-top: -5em;
+        display: grid;
+        grid-template-areas: 
+        "about about"
+        "social legal"
+        "copyright copyright";
+        margin-top: -1.2em;
     }
 }
 /* --------------Large Viewport--------------- */
@@ -326,8 +403,8 @@
 @media only screen and (min-width: 70em){
     body{
         background-color: burlywood;
-        border: 10px solid;
-        border-color: white;
+        /* border: 10px solid;
+        border-color: white; */
     }
 
     /* styling for header */
@@ -344,10 +421,6 @@
         "logo search your-products"
         "logo menu .";
         padding-bottom: 0em;
-    }
-
-    .results{
-        display: block;
     }
     
     /* aligning logo */
@@ -376,18 +449,17 @@
     .your-products{
         grid-area: your-products;
         justify-self: right;
-        padding-top: .75em;
+        /* padding-top: .75em; */
         padding-right: .5em;
+        margin-top: 2em;
     }
 
     .your-cart{
-        margin-bottom: 1em;
         padding:-.5em;
     }
 
     /* wishlist */
     .wishlist{
-        margin-bottom: 1em;
         padding-bottom: -.5em;
     }
 
@@ -448,40 +520,40 @@
         margin: .2em;
         padding: .2em;
     }
-
-    /* styking products */
+    
+/* =============== Main Class ================= */
+    /* styling products */
     .products{
         display: grid;
         grid-template-columns: 1fr 4fr;
         grid-template-areas: 
         "heading heading"
+        "filters subheading"
         "filters results";
+        gap: 0.5em;
     }
 
     /* styling headings */
     .heading{
         grid-area: heading;
-        margin-top: -1.25em;
-        margin-left: 5rem;
-        margin-right: 5rem;
+        margin-bottom: .5em;
     }
 
     /* styling filters */
     .filters{
         grid-area: filters;
-        margin-top: -.8em;
-        margin-right: 1.5px;
-        margin-left: 5rem;
+        margin-right: .5em;
+        margin-top: -1em;
     }
-
+/* =====sort======== */
     .sort{
         background-color: burlywood;
     }
 
-/* styling result content */
-    .results{
+    /* styling result content */
+    /* .results{
         grid-area: results;
-        margin-top: -.8em;
+        /* margin-top: -.8em;
         margin-left: 1.5px;
         margin-right: 5rem;
         padding-top: 0%;
@@ -490,22 +562,33 @@
         border-color:black;
         background-color: rgba(0, 0, 0, .8);
         margin-bottom: 0px;
-    }
+    } */
 
-    .results>h2{
-        margin-top: 0%;
-        margin-bottom: -18px;
+    /* toys grid */
+    .results {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+    /* subheading */
+    .subheading {
+        grid-area: subheading;
+        display: grid;
+        justify-content: center;
+        align-content: center;
         color: chocolate;
-        background-color: rgba(0, 0, 0, .8);
+        border: 1px solid black;
+        background-color: black;
+        margin-top: -.5em;
     }
-
     .product{
-        display: inline-block;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        display: grid;
+        min-height: 50em;
+        margin-bottom: 2em;
     }
 
-    .product1 .product{
+    /* .product1 .product{
         margin-bottom: 0em;
         padding-bottom: .5em;
     }
@@ -518,18 +601,26 @@
     .product5 .product{
         margin-bottom: 0em;
         padding-bottom: .5em;
-    }
+    } */
 
     /* styling pagination */
     .pagination{
         display: grid;
         justify-content: center;
-        color:chocolate;
+        align-content: center;
+        color: chocolate;
+        margin-top: -2em;
+        margin-left: -45em;
+        padding-bottom: 1em;
     }    
 
-    .back-top>a{
+    .back-top{
         text-decoration: none;
-        color: black
+        color: black;
+    }
+
+    .pages{
+        justify-content: center;
     }
 
     .page-num{
@@ -542,7 +633,7 @@
         grid-template-areas: 
         "about about"
         "social legal"
-        "copyright .";
+        "copyright copyright";
         margin-top: -1.2em;
     }
 
@@ -561,6 +652,5 @@
 
     .copyright{
         grid-area: copyright;
-        justify-self: left;
     }
 }
